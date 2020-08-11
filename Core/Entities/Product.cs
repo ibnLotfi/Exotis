@@ -6,7 +6,7 @@ namespace Core.Entities
 
         public string Description { get; set; }
 
-        public decimal price { get; set; }
+        public decimal Price { get; set; }
 
         public string PictureUrl { get; set; }
 

@@ -22,7 +22,8 @@ namespace Infrastructure.Data
         }
 
         public async Task<Product> GetProductByIdAsync(int id)
-        {
+        { 
+            // Les includes sont pour l'egger loading pt 30 section 3
             return await _context.Products
                 .Include(p => p.ProductType)
                 .Include(p => p.ProductBrand)
