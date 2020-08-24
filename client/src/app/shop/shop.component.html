@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+
+    <section class="col-3">
+      <h5 class="text-warning ml-3">Trier</h5>
+      <select class="custom-select mb-3">
+        <option selected>Alphabetique</option>
+        <option>Prix décroissant</option>
+        <option>Prix croissant</option>
+      </select>
+
+      <h5 class="text-warning ml-3">Marques</h5>
+      <ul class="list-group my-3">
+        <li class="list-group-item" *ngFor="let brand of brands">
+          {{brand.name}}
+        </li>
+      </ul>
+      <h5 class="text-warning ml-3">Catégories</h5>
+      <ul class="list-group my-3">
+        <li class="list-group-item ng" *ngFor="let type of types">
+          {{type.name}}
+        </li>
+      </ul>
+    </section>
+
+
+    <section class="col-9">
+      <div class="d-flex justify-content-between align-items-center pb-2">
+        <header>
+          <span>Afficher <strong>10</strong> sur <strong>16</strong> résultats</span>
+        </header>
+        <div class="form-inline mt-2">
+          <input type="text" class="form-control mr-2" style="width: 300px;" placeholder="Rechercher">
+          <button class="btn btn-outline-success my-2">Rechercher</button>
+          <button class="btn btn-outline-success ml-2 my-2">Réinitialiser</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4 mb-4" *ngFor="let product of products">
+          <app-product-item [product]="product"></app-product-item>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+
+
+
+<!-- <ul>
+    <li class="list-unstyled" *ngFor="let product of products">
+      {{product.name}}
+    </li>
+  </ul> -->
